@@ -1,0 +1,18 @@
+<div class="gallery-row">
+
+  <div class="gallery-column">
+
+    {{#each org}}
+    
+      <div class="biz-container {{this.abcRange}} {{this.category}} hideOrg">
+          <a href="./org{{this.orgNumber}}.html">
+            <img class="org" src="{{this.orgImg}}">
+              <h5 class="text-center">{{this.orgName}}</h5>
+          </a>
+      </div>
+
+    {{/each}}
+
+  </div> 
+
+ </div>
