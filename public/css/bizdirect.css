@@ -152,7 +152,7 @@ img {
     width: 100%;
 }
 
-.org1, .org2 {
+.org {
   opacity: 1;
   display: block;
   width: 100%;
@@ -173,11 +173,11 @@ img {
   text-align: center;
 }
 
-.biz-container:hover .org1 {
+.biz-container:hover .org {
   opacity: 0.3;
 }
 
-.biz-container:hover .org2 {
+.biz-container:hover .org {
   opacity: 0.3;
 }
 
@@ -208,6 +208,38 @@ img {
 .biz-categories {
 	margin: 0 auto;
 	padding-top: 20px;
+}
+
+.hideOrg {
+  /*width: 0px;*/
+  /*display: none;*/
+  opacity: 0.1;
+  transition: 0.5s;
+}
+
+/*.hideOrg h5 {
+  display: none;
+}
+*/
+.showOrg {
+  width: 100%;
+  opacity: 1;
+  /*display: inline;*/
+  /*display: none;*/
+  transition: 0.5s;
+}
+
+/*.showOrg h5 {
+  display: inline-block;
+  text-align: center;
+}*/
+
+.showOrgFD {
+  opacity: 1;
+}
+
+.showOrgAE {
+  opacity: 1;
 }
 
 

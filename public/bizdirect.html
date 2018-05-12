@@ -27,7 +27,7 @@
     </h1>
     <ul class="subnav-hero-subnav">
         <li>
-            <a href="./search.html">Browse Recent Event Images</a>
+            <a href="./search.html">Upcoming Events</a>
         </li>
         <li>
             <a href="./blog.html">Search Event Blog</a>
@@ -47,11 +47,15 @@
 
   <div class="bizdirect-body">
 
+
+
+    
+
     <!-- ABC ORDER NAV BAR -->
 
     <ul class="nav nav-pills nav-fill bizdirect-nav">
       <li class="nav-item">
-        <a class="nav-link ae biz-link" href="#">A - E</a>
+        <a class="nav-link ae biz-link sort" data-sort="name" href="#">A - E</a>
       </li>
       <li class="nav-item">
         <a class="nav-link fj biz-link" href="#">F - J</a>
@@ -70,42 +74,69 @@
   <!-- CATEGORIES NAV BAR -->
 
   <ul class="nav nav-pills nav-fill">
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link cat-link" href="#">Animals</a>
+    </li> -->
+    <li class="nav-item">
+      <a class="nav-link cat-link food-drink" href="#">Food & Drink</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link cat-link" href="#">Food & Drink</a>
+      <a class="nav-link cat-link arts-ent" href="#">Arts & Entertainment</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link cat-link" href="#">Art & Entertainment</a>
-    </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link cat-link" href="#">Sports & Travel</a>
     </li>
     <li class="nav-item">
       <a class="nav-link cat-link" href="#">Social</a>
-    </li>
+    </li> -->
   </ul>
 
  <!-- GALLERY OF ORGS -->
 
   <div class="gallery-row">
+
     <div class="gallery-column">
-      <div class="biz-container">
-        <a href="org1.html"><img class="org1" src="css/images/comp.jpg"></a>
+      <div class="biz-container org-ae fd-box hideOrg">
+          <a href="./org1.html">
+            <img class="org" src="css/images/comp.jpg">
+              <h5 class="text-center">Buffet Club</h5>
+          </a>
       </div>
-      <div class="biz-container">
-        <img src="css/images/library.jpg">
+      <div class="biz-container org-ko ae-box hideOrg">
+        <a href="./org3.html">
+          <img class="org" src="css/images/music.jpg">
+          <h5 class="text-center">Karaoke Night</h5>
+        </a>
+      </div>
+      <div class="biz-container org-fj ae-box hideOrg">
+          <a href="./org5.html">
+            <img class="org" src="css/images/comp.jpg">
+              <h5 class="text-center">Gaming at Odd Hours</h5>
+          </a>
       </div>
     </div>
+
     <div class="gallery-column">
-      <div class="biz-container">
-        <img class="org2" src="css/images/music.jpg">
+      <div class="biz-container org-pt ae-box hideOrg">
+        <a href="./org2.html">
+          <img class="org" src="css/images/music.jpg">
+          <h5 class="text-center">Sacramento Music Improv</h5>
+        </a>
       </div>
-      <div class="biz-container">
-        <img class="org2" src="css/images/comp.jpg">
+      <div class="biz-container org-ae ae-box hideOrg">
+        <a href="./org4.html">
+          <img class="org" src="css/images/library.jpg">
+          <h5 class="text-center">EXTREME Gaming Night</h5>
+        </a>
+      </div>
+      <div class="biz-container org-uz ae-box hideOrg">
+        <a href="./org6.html">
+          <img class="org" src="css/images/music.jpg">
+          <h5 class="text-center">Underwater Caroling</h5>
+        </a>
       </div>
     </div> 
+
   </div>
 
   <!-- END GALLERY OF ORGS -->
@@ -121,6 +152,8 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script> -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 
   <!-- <script src="js/blog.js" type="text/javascript"></script> -->
 
