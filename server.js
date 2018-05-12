@@ -8,6 +8,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var fileUpload = require('express-fileupload');
 var exphbs = require('express-handlebars');
+var multer = require('multer');
 
 // Sets up the Express App
 // =============================================================
@@ -22,16 +23,24 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-// parse application/json
-app.use(bodyParser.json());
+
+
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit:50000}));
+app.use(express.urlencoded())
+
+
+// // parse application/json
+// app.use(bodyParser.json());
 
 // Static directory
 app.use(express.static("public"));
 
-app.use(fileUpload({
-  limits: { fileSize: 50 * 1024 * 1024 },
-}));
+app.use(fileUpload());
+
+app.use(express.static(__dirname + '/public/'));
+
+
 
 // Routes
 // =============================================================
