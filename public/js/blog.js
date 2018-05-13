@@ -91,7 +91,7 @@ $(document).ready(function() {
 
     // newPostPhoto.attr('src', 'http:/photo');
 
-    newPostPhoto.attr('src','/image.png');
+    // newPostPhoto.attr('src','/uploads/image.png');
 
     console.log(newPostPhoto);
 
