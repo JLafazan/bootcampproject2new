@@ -78,7 +78,36 @@ module.exports = function (app) {
   app.get('/org1', function (req, res) {
     res.render('org1', {
       orgName: "Buffet Club"
+    });
+  });
 
+  app.get('/org2', function (req, res) {
+    res.render('org2', {
+      orgName: "Buffet Club"
+    });
+  });
+
+  app.get('/org3', function (req, res) {
+    res.render('org3', {
+      orgName: "Buffet Club"
+    });
+  });
+
+  app.get('/org4', function (req, res) {
+    res.render('org4', {
+      orgName: "Buffet Club"
+    });
+  });
+
+  app.get('/org5', function (req, res) {
+    res.render('org5', {
+      orgName: "Buffet Club"
+    });
+  });
+
+  app.get('/org6', function (req, res) {
+    res.render('org6', {
+      orgName: "Buffet Club"
     });
   });
 
