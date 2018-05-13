@@ -1,175 +1,79 @@
-# bootcampProject2
+# Search Downtown Sac
 
-Team Kill_It
-Shauna Ono
+Search Downtown Sac is an app that allows users and businesses to search for and promote events in the downtown Sacramento area.
+
+## Hey! I want to party!
+
+// heroku url here
+
+## See our presentation here!
+
+// google drive presentation here
+
+## THE TEAM
+
 Michelle Jung
-Shaughn Roque 
 Jeff Lafazan
+Shauna Ono
+Shaughn Roque 
 
-Sacramento People, Places, and Fun Events
-
-1) Home Page - Log In, Video Introduction, Links to pages
-2) Event Blog - Story and Picture Database
-3) Places and Events In Sacramento - Search Engine/ Database
-4) Media Page - Search and store favorite media links
-
-Premise
+## Premise
 
 We originally had three ideas - an app that recorded people’s stories and experiences; an app that enabled people in Sacramento to engage and participate in events; and an app that organized multiple social media channels privately. After consulting with Jordan and Treighton, we filtered and refined our ideas into an app that would encourage a close-knit community in Sacramento by allowing users and businesses to share their upcoming events and experiences only local to the city of Sacramento.
 
-Technologies involved
+## Technologies
 
 This full-stack app includes:
-HTML, CSS, Node.js, Express, MySQL, Sequelize, Handlebars.js, testing frameworks/assertion libraries (Mocha, Chai, Nightmare.js), routing, servers, MVC paradigm, CRUD
+
+HTML, CSS, Bootstrap, JavaScript, jQuery, Node.js, Express, MySQL, Sequelize.js, Handlebars.js, routing, servers, MVC paradigm, CRUD
 
 Deployed using Heroku
 
-Version control using Git
+Version control using Git Bash
 
-Tokenization? 
+## THE PROGRESS LOG
 
-THE PROGRESS LOG
+### Saturday, May 5, 2018
 
-Saturday, May 5, 2018
+1) Celebrated Cinco de Mayo by indulging in margaritas during our lunch hour :)
+2) Pulled all files that Jeff set up, including HTML template for website, routing, database, CSS
+3) Brainstormed ideas, discussed how we would incorporate CRUD and MySQL, discussed with Nelly, Jordan, and Treighton about how to execute and combine ideas, browsed examples of local-events-styled apps from Sacramento and Austin, TX
+4) Discussed differences between paid vs. free version, public vs. private version.
 
-Celebrated Cinco de Mayo by indulging in margaritas during our lunch hour :)
-Pulled all files that Jeff set up, including HTML template for website, routing, database, CSS
-Brainstormed ideas, discussed how we would incorporate CRUD and MySQL, discussed with Jordan and Treighton about how to execute and combine ideas, browsed examples of local-events-styled apps from Sacramento and Austin, TX
-
-Contributions
-
-Put your contributions here
-
-Stuff we learned
-
-Challenges
-
-Future features
-
-
-# bootcampProject2
-
-Team Kill_It
-Shauna Ono
-Michelle Jung
-Shaughn Roque 
-Jeff Lafazan
-
-Sacramento People, Places, and Fun Events
-
-1) Home Page - Log In, Video Introduction, Links to pages
-2) Event Blog - Story and Picture Database
-3) Places and Events In Sacramento - Search Engine/ Database
-4) Media Page - Search and store favorite media links
-
-Premise
-
-We originally had three ideas - an app that recorded people’s stories and experiences; an app that enabled people in Sacramento to engage and participate in events; and an app that organized multiple social media channels privately. After consulting with Jordan and Treighton, we filtered and refined our ideas into an app that would encourage a close-knit community in Sacramento by allowing users and businesses to share their upcoming events and experiences only local to the city of Sacramento.
-
-Technologies involved
-
-This full-stack app includes:
-HTML, CSS, Node.js, Express, MySQL, Sequelize, Handlebars.js, testing frameworks/assertion libraries (Mocha, Chai, Nightmare.js), routing, servers, MVC paradigm, CRUD
-
-Deployed using Heroku
-
-Version control using Git
-
-Tokenization? 
-
-THE PROGRESS LOG
-
-Saturday, May 5, 2018
-
-Celebrated Cinco de Mayo by indulging in margaritas during our lunch hour :)
-Pulled all files that Jeff set up, including HTML template for website, routing, database, CSS
-Brainstormed ideas, discussed how we would incorporate CRUD and MySQL, discussed with Jordan and Treighton about how to execute and combine ideas, browsed examples of local-events-styled apps from Sacramento and Austin, TX
-
-Contributions
-
-Put your contributions here
-
-Stuff we learned
-
-Challenges
-
-Future features
-
-Updates to bootcampproject2
-
-Saturday, may 5, 2018
-
-1 consulted with nelly on our project
-2 discussed differences b/w paid vs free version, public vs private version
-3 incentives for signing up - 
-
-public version allows you to just go to the events (cost of event depends on the organizers and vendors' discretion) and 
-	
-private version allows you to create travelog or scrapbook with photos, memories, experience at the event, meeting people, and allows you to have private entries that YOU share with people YOU choose and feel comfortable with seeing without fear of exposing your private life to other strangers and ppl you don't like
-
-
-Tuesday, May 8, 2018
-8:10 PM
-
-Tuesday, March 8, 2018
+### Tuesday, May 8, 2018
 
 1) Received guidance from Nelly in making the user's saved events the same as the events shown on the events page
-
 2) Troubleshooted through files we couldn't find, databases and tables we couldn't make, repos we couldn't pull, and branches that couldn't work (it's OK, we dealt with it all)
-
 3) Decided on making three databases - users, user's favorites, events
+4) Switched to making 3 tables instead of 3 databases to avoid the many connections we would need to make
+5) Got web-scraping advice from Jordan and using Cheerio.js if Sac365 didn't have an API of its own
 
-TO DO!!!
+### Wednesday, May 9, 2018
 
-TO DO:
+1) Collected placeholder images for organizations page
+2) Created 2 navigation bars for filtering orgs by ABC and category
+3) Tailored headerFooter stylesheet to create bizdirect stylesheet
+4) Created photo grid to hold images of organizations
+6) Created individual page for organizations
+7) Reviewed Handlebars.js for easy and convenient way to add database information into webpages
 
-Shaughn: databases: events_db, users_db, favorites_db
+### Thursday, May 10, 2018
 
-sequelize the &5?! out of it!
+1) Made CRUD blog post for add-your-own-event feature
+2) Created new repo after handling DS_STORE conflict
+3) Made to-do list of what tasks to accomplish
 
-UNDER EVENTS DB:
-id, name, location, image, date, description
+### Friday, May 11, 2018
+1) Refined search mode bars for organization filters using jQuery filter method and toggling classes to hide and show chosen orgs and categories
+2) Created and edited Google Drive to do list 
+3) Attempted handlebars for organizations gallery page
+4) Cleaned up template for individual organization page
 
-USERS DB:
-id, name, password (blank for privacy)
+### Saturday, May 12, 2018
 
-FAVORITES DB:
-id, event id, user id
-
-2) michelle: use handlebars to create the grid made to organize dummy organizations, make dummy pages for the 'about us' pages, work on handlebars for these pages
-
-3) someone: create ORM 
-_________
-
-EXTRA TASKS FOR ALL:
-1) new technology: web scraping - get the page's data and put it to the ORM
-
-___
-
-MORE UPDATES 5/8/18
-1) Decided on one database with multiple tables
-2) Got web-scraping advice from Jordan and using Cheerio.js if Sac365 didn't have an API of its own
-3) 
-
-Michelle's stuff on may 9, 2018 Wednesday
-
-1) collected placeholder images
-2) created 2 nav bars for abc and categories
-3) copied and pasted headerfooter stylesheet to make changes on own bizdirect.css stylesheets
-4) used tutorial to create photo grid
-5) attempted to add hover for text feature
-6) created page for one placeholder organization
-7) reviewed handlebars js for easy and convenient way to add database information 
-into webpages
-
-Thursday may 10, 2018
-
-1)  jeff made crud blog post from events db worked on photo
-2) made new directory after ds store broke
-3) made to do list of what tasks to accomplish (see shauna's todo lists on paper and in google drive)
-
-friday, may 11, 2018
-1) refined search mode bars for organization filters using jquery filter method and toggling classes to hide and show chosen orgs and categories
-2) shauna created a google drive to do list 
-3) attempted handlebars for biz gallery page
-4) cleaned up template for individual org page
+1) Created presentation including concept, technologies used, photos, process, demo, and future features
+2) Created Handlebars versions of favorites page
+3) Created Handlebars versions of headers
+4) Attempted Handlebars versions of organizations page and individual businesses page
+5) Attempted Cheerio for web scraping
+6) Created routes in HTML-Routes for Handlebars and getting info from Sac365
