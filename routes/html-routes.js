@@ -17,6 +17,10 @@ module.exports = function (app) {
     res.render("index", { headerName: "My Downtown Sac" });
   });
 
+  app.get("/index", function (req, res) {
+    res.render("index", { title: "StoryQuest" });
+  });
+
   app.get("/cms", function (req, res) {
     res.render("cms", { headerName: "Create Your Event" });
   });
@@ -36,32 +40,26 @@ module.exports = function (app) {
 
 
   app.get('/favorites', function (req, res) {
-    // Go to use userId to find events favored by this user
-    // join between your eventsTable with your favorite table
-    /* db.events.findAll({}).then(function(events){
-        events.joinOn(dbFavorites.find).then(function(favorites){
-    */
-    var myFavoriteEvents = [{
-      name: "Rihanna in town",
-      location: "UC Davis",
-      description: "Concert",
-      date: "Wed 05/15/2018",
-      time: "08:00",
-      eventLink: "https://www.ticketmaster.com/Rihanna-tickets/artist/1013826",
-      image: "http://www.2hilarious.com/wp-content/uploads/2016/03/IMG_4229.jpg"
-    }, {
-      name: "Chris Brown in town",
-      location: "Sac State",
-      description: "Concert",
-      date: "Wed 05/15/2018",
-      time: "08:00",
-      eventLink: "http://atlantablackstar.com/2012/02/11/chris-brown-denied-probation-release-blue-ivy-carter-favors-jay-z/chris-brown-on-stage-2/",
-      image: "http://atlantablackstar.com/wp-content/uploads/2012/02/chris-brown-on-stage.jpg"
-    }];
-    res.render('favorites', { favoritesEvents: myFavoriteEvents, headerName: "My Favorite Events" });
-  })
-  /*})
-  */
+    res.render('favorites', { title: "Users Favorites", favoritesStuff: ['basketball', "movies", "eating"], imageUrl: "/music.jpg" });
+  });
+
+  // gets biz org to display
+  app.get('/bizdirect', function (req, res) {
+    res.render('bizdirect', { 
+      title: "All Organizations",
+      // categories: ['Food & Drink', 'Arts & Entertainment'],
+      // categoriesClass: ['food-drink', 'arts-ent']
+      // imageUrl: "/music.jpg" 
+    });
+  });
+
+  // gets organizations page for each
+  app.get('/org1', function (req, res) {
+    res.render('org1', { 
+      orgName: "Buffet Club"
+      
+    });
+  });
 
   // res.render('favorites', { headerName: "My Favorite Events", favoritesStuff: ['basketball', "movies", "eating"], imageUrl: "/music.jpg" });
   //})
