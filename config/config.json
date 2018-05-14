@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "sagifzdeztixrf1z",
-    "password": "fw3u9kwbxf7hn5fq",
-    "database": "e5zb4cilj0oin6wh",
-    "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "process.env.JAWSDB_USER",
+    "password": "process.env.JAWSDB_PASS",
+    "database": "process.env.JAWSDB_DATABASE",
+    "host": "process.env.JAWSDB_HOST",
     "dialect": "mysql"
   },
   "test": {
