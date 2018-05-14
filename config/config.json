@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": "sagifzdeztixrf1z",
+    "password": "fw3u9kwbxf7hn5fq",
     "database": "event_db",
-    "host": "127.0.0.1",
+    "host": "process.env.JAWSDB_URL",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "root",
+    "username": "sagifzdeztixrf1z",
+    "password": "fw3u9kwbxf7hn5fq",
     "database": "database_test",
-    "host": "127.0.0.1",
+    "host": "process.env.JAWSDB_URL",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
+    "username": "sagifzdeztixrf1z",
+    "password": "fw3u9kwbxf7hn5fq",
     "database": "database_production",
-    "host": "127.0.0.1",
+    "host": "process.env.JAWSDB_URL",
     "dialect": "mysql"
   }
 }
