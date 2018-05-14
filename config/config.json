@@ -2,22 +2,22 @@
   "development": {
     "username": "sagifzdeztixrf1z",
     "password": "fw3u9kwbxf7hn5fq",
-    "database": "event_db",
-    "host": "process.env.JAWSDB_URL",
+    "database": "e5zb4cilj0oin6wh",
+    "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
     "username": "sagifzdeztixrf1z",
     "password": "fw3u9kwbxf7hn5fq",
-    "database": "database_test",
-    "host": "process.env.JAWSDB_URL",
+    "database": "e5zb4cilj0oin6wh",
+    "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
     "username": "sagifzdeztixrf1z",
     "password": "fw3u9kwbxf7hn5fq",
-    "database": "database_production",
-    "host": "process.env.JAWSDB_URL",
+    "database": "e5zb4cilj0oin6wh",
+    "host": "s0znzigqvfehvff5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
