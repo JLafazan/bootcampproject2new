@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
     "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.2",
@@ -19,6 +20,7 @@
     "express": "^4.14.0",
     "express-fileupload": "^0.4.0",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
     "formidable": "^1.2.1",
     "fs": "0.0.1-security",
     "image-upload-button": "^1.1.6",
@@ -26,6 +28,8 @@
     "multer": "^1.3.0",
     "mysql2": "^1.3.6",
     "nightmare": "^3.0.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^4.3.1"
   }
 }
