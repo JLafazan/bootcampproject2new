@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="./css/bizdirect.css">
 
 <div class="container">
+<<<<<<< HEAD
     {{!-- <div class="row mt-4"> --}}
         {{!-- <div class="col-md-4"> --}}
 
@@ -16,34 +17,46 @@
                         <h2 class="index-h2 text-center"><a class="index-a" href='/cms'>Post your event now!</a></h2>
                     {{!-- </div> --}}
                 {{!-- </div> --}}
-                </div>
-                
+=======
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div id="sign-up-box">
+                {{#if signup}}
+                <form action="/api/signup" method="POST" class="callout text-center">
+                    {{else}}
+                    <form action="/api/login" method="POST" class="callout text-center">
+                        {{/if}}
+                        <h2>{{action}}</h2>
+                        <div class="floated-label-wrapper">
+                            <label for="email">Email</label>
+                            <input type="email" id="signup-email" name="email" placeholder="Email">
+                        </div>
+                        <div class="floated-label-wrapper">
+                            <label for="pass">Password</label>
+                            <input type="password" id="signup-password" name="password" placeholder="Password">
+                        </div>
+                        <input class="button expanded" type="submit" value={{{action}}}>
+
+                        <p>Not a member? Sign up
+                            <a href="/new" id="signinhere">here.</a>
+                        </p>
+                    </form>
             </div>
-{{!-- 
+            <div id="sign-in-box" class="side-by-side">
+                <div style="width:500px; height:290px" class="callout text-center">
+                    <h2>Events</h2>
+                    <div id="events"></div>
+>>>>>>> master
+                </div>
+            </div>
+
+
             <div id="video" class="side-by-side">
                 <iframe width="574" height="290" src="https://www.youtube.com/embed/FsVkcy0bEbM" frameborder="0" allow="autoplay; encrypted-media"
                     align="middle" allowfullscreen></iframe>
 
-            </div> --}}
-
-            <div id="sign-up-box">
-                <form class="callout text-center">
-                    <h2>Join the fun. Sign up today!</h2>
-                    <div class="floated-label-wrapper">
-                        <label for="email">Email</label>
-                        <input type="email" id="signup-email" name="email input" placeholder="Email">
-                    </div>
-                    <div class="floated-label-wrapper">
-                        <label for="pass">Password</label>
-                        <input type="password" id="signup-password" name="password input" placeholder="Password">
-                    </div>
-                    <input class="button expanded" type="submit" value="Sign up" id="signup">
-                    <p>Already a member? Sign in
-                        <a class="here" id="signinhere">here.</a>
-                    </p>
-                </form>
-
             </div>
+
 
             <!-- https://www.youtube.com/watch?v=FsVkcy0bEbM -->
 
