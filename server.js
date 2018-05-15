@@ -9,6 +9,8 @@ var bodyParser = require("body-parser");
 var fileUpload = require('express-fileupload');
 var exphbs = require('express-handlebars');
 var multer = require('multer');
+// allows us to get the .env package and use those credentials wherever our heart desires
+require("dotenv").config();
 
 // Sets up the Express App
 // =============================================================
