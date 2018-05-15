@@ -1,10 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
     var Event = sequelize.define("Events", {
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -14,8 +9,27 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         time: {
-            type: DataTypes.DATE,
+            type: DataTypes.INTEGER,
             allowNull: false
+        },
+        description: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        photo: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        category: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        link: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     })
     return Event;
