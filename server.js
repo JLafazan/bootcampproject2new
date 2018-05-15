@@ -48,9 +48,7 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.post("/testing", function (req, res) {
-  console.log(req.body.email);
-})
+
 
 // Routes
 // =============================================================

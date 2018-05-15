@@ -54,7 +54,39 @@ module.exports = function (app) {
 
 
   app.get('/favorites', isAuthenticated, function (req, res) {
-    res.render('favorites', { title: "Users Favorites", favoritesStuff: ['basketball', "movies", "eating"], imageUrl: "/music.jpg" });
+    var events = [{
+      id=0,
+      name: "Rihana",
+      location: "UC Davis",
+      time: "8:00pm",
+      description: "Rihana in concert",
+      photo: "http://www.2hilarious.com/wp-content/uploads/2016/03/IMG_4229.jpg",
+      category: "Arts & Entertainment",
+      link: "https://www.ticketmaster.com/Rihanna-tickets/artist/1013826"
+    },
+    {
+      id=1,
+      name: "Chris Brown",
+      location: "Sac State",
+      time: "9:00pm",
+      description: "Chris Brown in concert",
+      photo: "http://i.dailymail.co.uk/i/pix/2015/03/09/2675999100000578-0-image-a-6_1425898063384.jpg",
+      category: "Arts & Entertainment",
+      link: "https://concerts1.livenation.com/event/1C005476D4FE920E?crosssite=TM_US:1013849:229503&_ga=2.2572400.1940279765.1526354527-2001370559.1526158322&f_PPL=true&ab=efeat5787v1"
+    },
+    {
+      id=2,
+      name: "Sac Beerfest",
+      location: "K Street Mall",
+      time: "Noon",
+      description: "Drink lots o beer",
+      photo: "https://www.sacramento365.com/wp-content/uploads/sites/www.sacramento365.com/images/2017/01/capitol-beer-fest-1-400x281.jpg",
+      category: "Food & Drinks",
+      link: "http://www.capitolbeerfest.com/"
+    }
+    ]
+
+    res.render('favorites', { title: "Users Favorites", favoriteEvents: events });
   });
 
   // gets biz org to display
