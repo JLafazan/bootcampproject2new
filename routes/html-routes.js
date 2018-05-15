@@ -5,6 +5,9 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 
 // Routes
 // =============================================================
@@ -14,11 +17,22 @@ module.exports = function (app) {
 
   // index route loads view.html
   app.get("/", function (req, res) {
-    res.render("index", { headerName: "My Downtown Sac" });
+    //If we have a user render index with a "Sign-In" otherwise render index with "Sign Up" action
+    if (req.user) { // We have req.user when a user is logged in
+      //res.render("index", { headerName: "My Downtown Sac", action: "Sign-In", user: "true" });
+      res.redirect("/favorites");
+    } else {
+      res.render("index", { headerName: "My Downtown Sac", action: "Sign-In" });
+    }
+  });
+
+  app.get("/new", function (req, res) {
+    res.render("index", { headerName: "My Downtown Sac", signup: true, action: "Sign-Up" });
   });
 
   app.get("/index", function (req, res) {
-    res.render("index", { title: "StoryQuest" });
+    //res.render("index", { title: "StoryQuest" });
+    res.redirect("/");
   });
 
   app.get("/cms", function (req, res) {
@@ -39,14 +53,14 @@ module.exports = function (app) {
   });
 
 
-  app.get('/favorites', function (req, res) {
+  app.get('/favorites', isAuthenticated, function (req, res) {
     res.render('favorites', { title: "Users Favorites", favoritesStuff: ['basketball', "movies", "eating"], imageUrl: "/music.jpg" });
   });
 
   // gets biz org to display
   app.get('/bizdirect', function (req, res) {
-    res.render('bizdirect', { 
-      title: "All Organizations",
+    res.render('bizdirect', {
+      title: "All Organizations", headerName: "Business Directory"
       // categories: ['Food & Drink', 'Arts & Entertainment'],
       // categoriesClass: ['food-drink', 'arts-ent']
       // imageUrl: "/music.jpg" 
@@ -55,9 +69,9 @@ module.exports = function (app) {
 
   // gets organizations page for each
   app.get('/org1', function (req, res) {
-    res.render('org1', { 
+    res.render('org1', {
       orgName: "Buffet Club"
-      
+
     });
   });
 
