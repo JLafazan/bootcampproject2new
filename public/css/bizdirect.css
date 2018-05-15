@@ -105,13 +105,14 @@ footer {
 }
 
 .callout.text-center {
-  background-color: silver;
+  background-color: #fff;
 }
 
 /* INDEX PAGE */
 
 .index-h2 {
   text-align: center;
+  margin: 0 auto;
 }
 
 .index-a {
@@ -129,11 +130,14 @@ footer {
   margin: 20px 0;
 }
 
-
+#events {
+  margin: 20px 0;
+}
 
 .NewStory {
   background-color: #FAAF2A;
   width: 100%;
+  margin: 20px 0;
 }
 
 /* CREATE EVENTS PAGE */
@@ -146,6 +150,28 @@ footer {
   float: left;
   background-color: #2C3E50;
   border: none;
+}
+
+/* EVENTS PAGE */
+
+.events-h5 {
+  margin: 20px 0;
+}
+
+.event-info {
+  margin: 0 10px;
+}
+
+.add-fav-btn {
+  border: none;
+  background-color: #6bc1d3;
+  width: 100%;
+  color: #fff;
+  letter-spacing: 0.025em;
+}
+
+#events-biz-container {
+  margin: 0 0 20px 0;
 }
 
 /* MICHELLE'S CSS */
