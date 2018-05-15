@@ -108,6 +108,46 @@ footer {
   background-color: silver;
 }
 
+/* INDEX PAGE */
+
+.index-h2 {
+  text-align: center;
+}
+
+.index-a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#sign-up-box {
+  margin: 20px 0;
+}
+
+#events-grid {
+  width: 100%;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+
+
+.NewStory {
+  background-color: #FAAF2A;
+  width: 100%;
+}
+
+/* CREATE EVENTS PAGE */
+
+.cms-h5 {
+  margin: 20px 0;
+}
+
+#cms-submit {
+  float: left;
+  background-color: #2C3E50;
+  border: none;
+}
+
 /* MICHELLE'S CSS */
 
 .active {
@@ -174,11 +214,7 @@ img {
 }
 
 .biz-container:hover .org {
-  opacity: 0.3;
-}
-
-.biz-container:hover .org {
-  opacity: 0.3;
+  opacity: 0.7;
 }
 
 .biz-container:hover .biz-middle {
@@ -202,7 +238,6 @@ img {
 .biz-cat-h4 {
 	display: inline;
 	margin: 0 20px;
-
 }
 
 .biz-categories {
@@ -213,7 +248,7 @@ img {
 .hideOrg {
   /*width: 0px;*/
   /*display: none;*/
-  opacity: 0.1;
+  opacity: 0.3;
   transition: 0.5s;
 }
 

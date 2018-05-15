@@ -8,6 +8,9 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var fileUpload = require('express-fileupload');
 var exphbs = require('express-handlebars');
+var multer = require('multer');
+// allows us to get the .env package and use those credentials wherever our heart desires
+// require("dotenv").config();
 
 // Sets up the Express App
 // =============================================================
@@ -22,16 +25,34 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
-// parse application/json
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true, parameterLimit: 50000 }));
+app.use(express.urlencoded())
+
+
+// // parse application/json
+// app.use(bodyParser.json());
 
 // Static directory
 app.use(express.static("public"));
 
-app.use(fileUpload({
-  limits: { fileSize: 50 * 1024 * 1024 },
-}));
+app.use(fileUpload());
+
+app.use(express.static(__dirname + '/public/'));
+
+// Authentication
+var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
+
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.post("/testing", function (req, res) {
+  console.log(req.body.email);
+})
 
 // Routes
 // =============================================================

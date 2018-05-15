@@ -14,11 +14,36 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	 crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">
 	<script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 </head>
+<!-- HEADER -->
+
+<div class="subnav-hero-section">
+	<h1 class="subnav-hero-headline">
+		<a href="/index">{{headerName}}</a>
+	</h1>
+	<ul class="subnav-hero-subnav">
+
+		<li>
+			<a href="/blog">Events</a>
+		</li>
+		<li>
+			<a href="/blog">Create Events</a>
+		</li>
+		<li>
+			<a href="/favorites">My Favorites</a>
+		</li>
+		<li>
+			<a href="/bizdirect">Business Directory</a>
+		</li>
+
+	</ul>
+	<a href="/logout" id="logout">Log Out</a>
+</div>
 
 <body>
 	{{{ body }}}

@@ -58,4 +58,8 @@ typings/
 .env
 
 .DS_Store
+<<<<<<< HEAD
 
+=======
+.env
+>>>>>>> master
