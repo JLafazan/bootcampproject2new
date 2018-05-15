@@ -13,9 +13,10 @@ module.exports = function (sequelize, DataTypes) {
         created_at: {
             type: DataTypes.DATE,
             allowNull: false
-        },
+        }
 
     });
+
     return User;
 }
 
