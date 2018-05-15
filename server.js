@@ -23,10 +23,8 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 
 // parse application/x-www-form-urlencoded
-
-
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true, parameterLimit:50000}));
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true, parameterLimit: 50000 }));
 app.use(express.urlencoded())
 
 
@@ -40,7 +38,19 @@ app.use(fileUpload());
 
 app.use(express.static(__dirname + '/public/'));
 
+// Authentication
+var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
 
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.post("/testing", function (req, res) {
+  console.log(req.body.email);
+})
 
 // Routes
 // =============================================================
