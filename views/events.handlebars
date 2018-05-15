@@ -25,33 +25,55 @@
     <ul class="nav nav-pills nav-fill">
 
         <li class="nav-item">
-            <a class="nav-link cat-link" href="#">Food & Drink</a>
+            <a class="nav-link cat-link" href="#">Food and Drink</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link cat-link" href="#">Art & Entertainment</a>
+            <a class="nav-link cat-link" href="#">Art and Entertainment</a>
         </li>
 
     </ul>
+
+    <h5 class="events-h5 text-center">Don't see your favorite event here? <a href="./cms">Create one now!</a></h5>
 
     <!-- GALLERY OF ORGS -->
 
     <div class="gallery-row">
         <div class="gallery-column">
-            <div class="biz-container">
-                <a href="org1.html">
+            <div class="biz-container" id="events-biz-container">
+                <a href="./org1">
                     <img class="org1" src="css/images/comp.jpg">
                 </a>
+                <div class="event-info">
+                    <h5 class="events-h5 text-center">Event 1</h5>
+                    <h6>We'll be practicing some mindfulness and possibly engaging in once-illegal activities that will definitely relieve my headache.</h6>
+                    <button class="add-fav-btn"><h5 class="events-h5"><a href="./favorites">Add to favorites!</a></h5></button>
+                </div>
             </div>
-            <div class="biz-container">
+            <div class="biz-container" id="events-biz-container">
                 <img src="css/images/library.jpg">
+                <div class="event-info">
+                    <h5 class="events-h5 text-center">Event 2</h5>
+                    <h6>Hey, I just met you...</h6>
+                    <button class="add-fav-btn"><h5 class="events-h5">Add to favorites!</h5></button>
+                </div>
             </div>
         </div>
         <div class="gallery-column">
-            <div class="biz-container">
+            <div class="biz-container" id="events-biz-container">
                 <img class="org2" src="css/images/music.jpg">
+                <div class="event-info">
+                    <h5 class="events-h5 text-center">Event 3</h5>
+                    <h6>Parkour in the Sky. 'Nuff said.</h6>
+                    <button class="add-fav-btn"><h5 class="events-h5">Add to favorites!</h5></button>
+                </div>
             </div>
-            <div class="biz-container">
+            <div class="biz-container" id="events-biz-container">
                 <img class="org2" src="css/images/comp.jpg">
+                <div class="event-info">
+                    <h5 class="events-h5 text-center">The Big Hibernation</h5>
+                    <h6>Help, I'm trapped in this classroom and I can't get out.</h6>
+                    <button class="add-fav-btn"><h5 class="events-h5">Add to favorites!</h5></button>
+                </div>
             </div>
         </div>
     </div>
