@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Gets an optional query string from our url (i.e. ?post_id=23)
   var url = window.location.search;
   var postId;
@@ -35,7 +35,7 @@ $(document).ready(function() {
       body: bodyInput.val().trim(),
       category: postCategorySelect.val(),
       photo: photoInput.val()
-    
+
     };
 
     console.log(newPost);
@@ -61,7 +61,6 @@ $(document).ready(function() {
     console.log("Here is the file:  ", file);
     console.log('Post: ', Post);
 
-    
 
 
 
@@ -69,14 +68,15 @@ $(document).ready(function() {
 
 
 
-    $.post("/api/posts/", Post, function() {
+
+    $.post("/api/events/", Post, function () {
       window.location.href = "/blog";
-   
 
 
-    
 
- });
+
+
+    });
   }
 
 
@@ -96,19 +96,19 @@ $(document).ready(function() {
   //       processData: false,
   //       type: 'POST',
   //       success: function (data) {
-  //         $.post("/api/posts/", Post, function() {
+  //         $.post("/api/events/", Post, function() {
   //           // window.location.href = "/blog";
   //         });
-      
+
   //       }
   //   });
- 
+
 
   // }
 
   // Gets post data for a post if we're editing
   function getPostData(id) {
-    $.get("/api/posts/" + id, function(data) {
+    $.get("/api/events/" + id, function (data) {
       if (data) {
         // If this post exists, prefill our cms forms with its data
         titleInput.val(data.title);
@@ -126,10 +126,10 @@ $(document).ready(function() {
   function updatePost(post) {
     $.ajax({
       method: "PUT",
-      url: "/api/posts",
+      url: "/api/events",
       data: post
     })
-      .then(function() {
+      .then(function () {
         window.location.href = "/blog";
       });
   }

@@ -161,7 +161,7 @@ img {
   backface-visibility: hidden;
 }
 
-}
+
 .biz-middle {
   transition: .5s ease;
   opacity: 0;
@@ -236,6 +236,8 @@ img {
 .showOrgAE {
   opacity: 1;
 }
+
+
 
 
 /* Responsive layout - makes a two column-layout instead of four columns */

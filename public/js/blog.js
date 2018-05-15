@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // blogContainer holds all of our posts
   var blogContainer = $(".blog-container");
   var postCategorySelect = $("#category");
@@ -18,7 +18,7 @@ $(document).ready(function() {
     if (categoryString) {
       categoryString = "/category/" + categoryString;
     }
-    $.get("/api/posts" + categoryString, function(data) {
+    $.get("/api/events" + categoryString, function (data) {
       console.log("Posts", data);
       posts = data;
       if (!posts || !posts.length) {
@@ -34,9 +34,9 @@ $(document).ready(function() {
   function deletePost(id) {
     $.ajax({
       method: "DELETE",
-      url: "/api/posts/" + id
+      url: "/api/events/" + id
     })
-      .then(function() {
+      .then(function () {
         getPosts(postCategorySelect.val());
       });
   }
@@ -56,18 +56,18 @@ $(document).ready(function() {
     blogContainer.append(postsToAdd);
     // eventsContainer.append(postsToAdd);
   }
-// function createServer(req,res) {
-//     if (req.url == '/photo') {
-//       var form = new formidable.IncomingForm();
-//       form.parse(req, function(err, fields, files){
-//       res.write('File Uploaded')
-//       res.end();  
-//       });
-//     }
-// }
-//   
+  // function createServer(req,res) {
+  //     if (req.url == '/photo') {
+  //       var form = new formidable.IncomingForm();
+  //       form.parse(req, function(err, fields, files){
+  //       res.write('File Uploaded')
+  //       res.end();  
+  //       });
+  //     }
+  // }
+  //   
 
-// This function constructs a post's HTML
+  // This function constructs a post's HTML
   function createNewRow(post) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
@@ -82,7 +82,7 @@ $(document).ready(function() {
     var newPostPhoto = $('<img>');
 
     // createServer();
-    
+
     // var buffer = post.photo.data
 
     // console.log("Post Photo: "+ buffer.toString('utf8'));
@@ -103,20 +103,20 @@ $(document).ready(function() {
       float: "right",
       "font-weight": "700",
       "margin-top":
-      "0px"
+        "0px"
     });
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
     var newPostBody = $("<p>");
 
     console.log(post.photo);
-    
+
     newPostTitle.text(post.title + " ");
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
-    
+
     newPostTitle.append(newPostDate);
     newPostCardHeading.append(deleteBtn);
     newPostCardHeading.append(editBtn);

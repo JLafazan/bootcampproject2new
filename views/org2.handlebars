@@ -1,9 +1,10 @@
 <!-- HEADER -->
 
-{{!-- <div class="subnav-hero-section">
+{{!--
+<div class="subnav-hero-section">
 
   <h1 class="subnav-hero-headline">
-      <a href="./index">{{orgName}}</a>
+    <a href="./index">{{orgName}}</a>
   </h1>
 
   <ul class="subnav-hero-subnav">
@@ -30,9 +31,9 @@
 
   <div class="org-info">
 
-  <div class="container">
+    <div class="container">
 
-    <!-- NAME OF ORGANIZATION -->
+      <!-- NAME OF ORGANIZATION -->
 
       <div class="row">
         <div class="col-md-12">
@@ -40,24 +41,22 @@
         </div>
       </div>
 
-    <!-- ORG SUMMARY MODULE -->
+      <!-- ORG SUMMARY MODULE -->
 
       <div class="row">
 
-          {{!-- ORG PHOTO --}}
-          <div class="col-md-5 biz-photo">
+        {{!-- ORG PHOTO --}}
+        <div class="col-md-5 biz-photo">
           <img class="org1" src="css/images/comp.jpg">
-          </div>
+        </div>
 
-          {{!-- ORG CATEGORIES AND BIO --}}
-          <div class="col-md-7">
+        {{!-- ORG CATEGORIES AND BIO --}}
+        <div class="col-md-7">
           <h5>
-              {{!-- {{#each orgCategory}} --}}
-              Arts &amp; Entertainment
-              {{!-- {{/each}} --}}
-              </h5>
+            {{!-- {{#each orgCategory}} --}} Arts &amp; Entertainment {{!-- {{/each}} --}}
+          </h5>
           <p>Let's go easy and start out with A Major. Or something.</p>
-          </div>
+        </div>
 
       </div>
 
@@ -78,13 +77,11 @@
     <div class="row">
 
       <div class="col-md-1"></div>
-      
+
       <div class="col-md-10">
         <div class="card-group">
 
-            {{!-- {{#each eventStuff}} --}}
-
-            {{!-- {{#each eventStuff.pastEvents}}
+          {{!-- {{#each eventStuff}} --}} {{!-- {{#each eventStuff.pastEvents}}
 
           <div class="card">
             <img class="card-img-top" src="#">
@@ -97,9 +94,7 @@
             </div>
           </div>
 
-          {{/each}}
-
-          {{#each eventStuff.upcomingEvents}}
+          {{/each}} {{#each eventStuff.upcomingEvents}}
           <div class="card">
             <img class="card-img-top" src="#">
             <div class="card-body">
@@ -110,78 +105,82 @@
               <small class="text-muted">{{this.eventMetrics}}</small>
             </div>
           </div>
-          {{/each}} --}}
-          {{!-- {{/each}} --}}
+          {{/each}} --}} {{!-- {{/each}} --}}
 
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card">
+            <img class="card-img-top" src="css/images/flipboardmac.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Music Jam I</h5>
               <p class="card-text">Let's write some random songs.</p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">12 attended<br/>on May 4, 2018</small>
+              <small class="text-muted">12 attended
+                <br/>on May 4, 2018</small>
             </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="css/images/flipboardsf.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Theory Session</h5>
+              <p class="card-text">We'll be discussing some theory and how it can contribute to better improv. We'll have a bit of time at the
+                end to practice - bring your instrument!</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">14 plan to attend.
+                <br/>RSVP before May 14, 2018!</small>
+            </div>
+          </div>
+
+          <div class="col-md-1"></div>
+
         </div>
 
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Theory Session</h5>
-            <p class="card-text">We'll be discussing some theory and how it can contribute to better improv. We'll have a bit of time at the end to practice - bring your instrument!</p>
+        <!-- END CARD GROUP -->
+
+        <!-- BEGIN BLOG SECTION -->
+
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h3 class="text-center">Journal Entries from Sacramento Music Improv</h3>
           </div>
-          <div class="card-footer">
-            <small class="text-muted">14 plan to attend.<br/>RSVP before May 14, 2018!</small>
-          </div>
+          <div class="col-md-1"></div>
         </div>
 
-      <div class="col-md-1"></div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
 
-    </div>
+            <div class="blog-entry">
+              <h4>Sunday, April 22, 2018</h4>
+              <p>It was great meeting all of you tonight! Bring your friends next time - we'll be asking Buffet Club for some
+                catering :)</p>
+            </div>
 
-    <!-- END CARD GROUP -->
+            <div class="blog-entry">
+              <h4>Friday, May 4, 2018</h4>
+              <p>Violins and keyboards and saxophones! How lovely!</p>
+            </div>
 
-    <!-- BEGIN BLOG SECTION -->
+            <div class="blog-entry">
+              <h4>May 9, 2018</h4>
+              <p>Awesome time harmonizing with everyone today. We heard some new voices and instruments and learned a little
+                more about all of you! Hope you see you again soon!</p>
+            </div>
 
-    <div class="row">  
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <h3 class="text-center">Journal Entries from Sacramento Music Improv</h3>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <!-- END BLOG SECTION -->
+
+        <!-- BEGIN CLOSING DIVS -->
+
       </div>
-      <div class="col-md-1"></div>
     </div>
-
-    <div class="row">
-      <div class="col-md-1"></div>
-        <div class="col-md-10">
-
-          <div class="blog-entry">
-            <h4>Sunday, April 22, 2018</h4>
-            <p>It was great meeting all of you tonight! Bring your friends next time - we'll be asking Buffet Club for some catering :)</p>
-          </div>
-
-          <div class="blog-entry">
-            <h4>Friday, May 4, 2018</h4>
-            <p>Violins and keyboards and saxophones! How lovely!</p>
-          </div>
-
-          <div class="blog-entry">
-            <h4>May 9, 2018</h4>
-            <p>Awesome time harmonizing with everyone today. We heard some new voices and instruments and learned a little more about all of you! Hope you see you again soon!</p>
-          </div>
-
-        </div>
-      <div class="col-md-1"></div>
-    </div>
-
-    <!-- END BLOG SECTION -->
-
-    <!-- BEGIN CLOSING DIVS -->
-
   </div>
-  </div>
-  </div>
-  </div>
+</div>
 
 <footer></footer>
 
