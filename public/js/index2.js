@@ -1,22 +1,18 @@
 $(document).ready(function() {
   console.log("document.ready");
-  var eventsContainer = $("#events");
+  var eventsContainer = $("#main-events");
   console.log(eventsContainer);
 
   function getPosts(category) {
     console.log('getPosts')
-    var categoryString = category || "";
-    if (categoryString) {
-      categoryString = "/category/" + categoryString;
-    }
-    $.get("/api/posts" + categoryString, function(posts) {
-      console.log("posts: ", posts);
-      eventsContainer.empty();
-      if (!posts || !posts.length) {
+      $.get("/api/events", function(events) {
+      console.log("events: ", events);  
+      eventsContainer.empty();    
+      if (!events || !events.length) {
         eventsContainer.html("No events")
       } else {
-        posts.forEach(post => {
-          eventsContainer.append(`<p>${post.title}: ${post.body}</p>`)
+        events.forEach(events => {
+          eventsContainer.append(`<p>${events.name}: ${events.description}</p>`)
         })
       }
     });
