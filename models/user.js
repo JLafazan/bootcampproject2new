@@ -50,6 +50,14 @@ module.exports = function (sequelize, DataTypes) {
     // In this case, before a User is created, we will automatically hash their password
     User.hook("beforeCreate", function (user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+
+    // User.associate = models => {
+    //     User.belongsToMany(models.Events, {
+    //         through: models.UserEvents,
+    //         foreignKey: "userid",
+    //         as: "events"
+    //     })
+    // }    
     });
 
     return User;

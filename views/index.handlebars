@@ -1,23 +1,6 @@
 <link rel="stylesheet" href="./css/bizdirect.css">
 
 <div class="container">
-<<<<<<< HEAD
-    {{!-- <div class="row mt-4"> --}}
-        {{!-- <div class="col-md-4"> --}}
-
-            <div id="events-grid" class="side-by-side">
-                {{!-- <div style="width:500px; height:290px" class="callout text-center"> --}}
-                <div class="text-center">
-                    <h2 class="index-h2">Explore Sac. Go to events. Host your own. <br/>Meet people. Have fun. Stay local.</h2>
-                    <div id="events">
-                        {{!-- will populate with events --}}
-                    </div>
-                    <div class="row NewStory">
-                        {{!-- <div class="new"> --}}
-                        <h2 class="index-h2 text-center"><a class="index-a" href='/cms'>Post your event now!</a></h2>
-                    {{!-- </div> --}}
-                {{!-- </div> --}}
-=======
     <div class="row mt-4">
         <div class="col-md-4">
             <div id="sign-up-box">
@@ -36,17 +19,22 @@
                             <input type="password" id="signup-password" name="password" placeholder="Password">
                         </div>
                         <input class="button expanded" type="submit" value={{{action}}}>
-
-                        <p>Not a member? Sign up
-                            <a href="/new" id="signinhere">here.</a>
-                        </p>
+                        {{#if signup}}
+                            <p>Already a member? Sign in
+                                <a href="/" id="signinhere">here.</a>
+                            </p>
+                        {{else}}
+                            <p>Not a member? Sign up
+                                <a href="/new" id="signinhere">here.</a>
+                            </p>
+                        {{/if}}
+                        
                     </form>
             </div>
             <div id="sign-in-box" class="side-by-side">
                 <div style="width:500px; height:290px" class="callout text-center">
                     <h2>Events</h2>
                     <div id="events"></div>
->>>>>>> master
                 </div>
             </div>
 
