@@ -19,6 +19,13 @@
 	<script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css">
 	<script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+	
+	{{#if userId}}
+	<script>
+		var currentUserId = {{userId}};
+		</script>
+	{{/if}}
+
 </head>
 <!-- HEADER -->
 
@@ -47,6 +54,7 @@
 
 <body>
 	{{{ body }}}
+
 </body>
 
 </html>

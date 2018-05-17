@@ -16,7 +16,9 @@ var passport = require("../config/passport");
 module.exports = function (app) {
     // GET route for getting all of the events
     app.get("/api/events/", function (req, res) {
-        db.Events.findAll({})
+        // Event instead of Events allows events to show up in All Events
+        db.Event.findAll({})
+        // db.Events.findAll({})
             .then(function (dbEvents) {
                 res.json(dbEvents);
             });

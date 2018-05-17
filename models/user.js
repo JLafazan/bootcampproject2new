@@ -50,15 +50,23 @@ module.exports = function (sequelize, DataTypes) {
     // In this case, before a User is created, we will automatically hash their password
     User.hook("beforeCreate", function (user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-
-    // User.associate = models => {
-    //     User.belongsToMany(models.Events, {
-    //         through: models.UserEvents,
-    //         foreignKey: "userid",
-    //         as: "events"
-    //     })
-    // }    
     });
+
+    //This will create a new model called Favorites with the equivalent foreign keys eventId and userId
+    //This will add methods getUsers, setUsers, addUser,addUsers to Event, and getEvents, setEvents, addEvent, and addEvents to User
+    // var Event = require('./event.js');
+    // User.belongsToMany(Event, { through: Favorite }); 
+    // Event.belongsToMany(User, { through: Favorite });
+
+    // ATTEMPTS TO CREATE MODEL FOR USER TO MAKE EVENT ACCESSIBLE TO ALL USERS
+    User.associate = models => {
+      console.log(models)
+      User.belongsToMany(models.Event, {
+          through: models.Favorite,
+          // 11.07 am - added this to get rid of duplicate column error
+          foreignKey: 'userId'
+      })
+    }
 
     return User;
 };

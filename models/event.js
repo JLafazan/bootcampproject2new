@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Events = sequelize.define("Events", {
+    var Event = sequelize.define("Event", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -33,13 +33,15 @@ module.exports = function (sequelize, DataTypes) {
         }
        
     });
-    // Events.associate = models => {
-    //     Events.belongsToMany(models.User, {
-    //         through: models.UserEvents,
-    //         foreignKey: "eventid",
-    //         as: "user"
-    //     })
-    // }
     
-    return Events;
+    // ENABLES EVENT TO BE ACCESSIBLE TO ALL USERS
+    Event.associate = models => {
+        Event.belongsToMany(models.User, {
+            through: models.Favorite,
+            // 11.07 am - added this to get rid of duplicate column error
+          foreignKey: 'eventId'
+        })
+      }
+    
+    return Event;
 }

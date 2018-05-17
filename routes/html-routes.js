@@ -49,7 +49,13 @@ module.exports = function (app) {
   });
 
   app.get("/events", function (req, res) {
-    res.render("events", { headerName: "Downtown Sac Events" });
+    if (req.user) { // We have req.user when a user is logged in
+      //res.render("index", { headerName: "My Downtown Sac", action: "Sign-In", user: "true" });
+      res.render("events", { headerName: "Downtown Sac Events", userId: req.user.id});
+    } else {
+      res.render("index", { headerName: "My Downtown Sac", action: "Sign-In" });
+    }
+    
   });
 
   // shows user's favorited events (grabbed from the events page) and makes it appear on the favorites page
