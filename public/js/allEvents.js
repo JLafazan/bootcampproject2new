@@ -21,7 +21,7 @@ var eventCard=`<div class="gallery-column">
       <div class="event-info">
           <h5 class="events-h5 text-center">${event.name}</h5>
           <h6 class="events-h6">${event.description}</h6>
-          <button class="add-fav-btn" data_id=${event.id}><h5 class="events-h5"><a class="events-a" href="./favorites">Add to favorites!</a></h5></button>
+          <button class="add-fav-btn" data_id=${event.id}><h5 class="events-h5"><a class="events-a">Add to favorites!</a></h5></button>
       </div>
   </div>
 </div>`;

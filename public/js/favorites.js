@@ -1,18 +1,19 @@
 $(document).ready(function() {
 
   // alert('hi');
-  console.log(currentUserId);
-  $('button').on('click', function(e) {
+  
+  $('body').on('click','.add-fav-btn', function(e) {
     // stop page from refreshing
     e.preventDefault();
     alert('yooo');
     console.log('eyyy');
 
+console.log('current user is ' + currentUserId);
+    console.log('event id is' + $(this).attr('data_id'));
+
     $.ajax ({
       type: "PUT",
-      eventId: $(this).data('id'),
-      userId: $(currentUserId)
+      url: '/api/favorites/' + $(currentUserId) + "/" + $(this).attr('data_id')
     });
   });
-  //ajax PUT!!!
 });
