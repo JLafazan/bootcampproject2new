@@ -40,40 +40,79 @@ module.exports = function (app) {
   });
 
   // blog route loads blog.html
-  app.get("/blog", function (req, res) {
-    res.render("blog", { headerName: "Events Diary" });
-  });
+  // app.get("/blog", function (req, res) {
+  //   res.render("blog", { headerName: "Events Diary" });
+  // });
 
   app.get('/image.png', function (req, res) {
     res.render("image", { title: "image" });
   });
 
   app.get("/events", function (req, res) {
-    res.render("events", { headerName: "Downtown Sac Events" });
+    if (req.user) { // We have req.user when a user is logged in
+      //res.render("index", { headerName: "My Downtown Sac", action: "Sign-In", user: "true" });
+      res.render("events", { headerName: "Downtown Sac Events", userId: req.user.id});
+    } else {
+      res.render("index", { headerName: "My Downtown Sac", action: "Sign-In" });
+    }
+    
   });
 
+  // shows user's favorited events (grabbed from the events page) and makes it appear on the favorites page
+  // app.get('/api/favorites/:eventid', UserEvents.show);
 
-  app.get('/favorites', isAuthenticated, function (req, res) {
-    res.render('favorites', { title: "Users Favorites", favoritesStuff: ['basketball', "movies", "eating"], imageUrl: "/music.jpg" });
+  app.get('/favorites', isAuthenticated, function (req, res) {    
+    res.render('favorites', { 
+      headerName: "My Favorites",
+      title: "User's Favorites",
+      favoritesEvents : [{
+      name: "Rihanna",
+      location: "California",
+      date: "May 17, 2018",
+      time: "8pm",
+      description: "You know what happens at concerts",
+      photo: "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1200x630/format/jpg/quality/85/http%3A%2F%2Fi.huffpost.com%2Fgen%2F1900911%2Fimages%2Fn-SAD-CAT-628x314.jpg",
+      category: "Arts & Entertainment",
+      link: "https://www.ticketmaster.com/artist/1013826"
+    }, {
+      name: "Rihanna",
+      location: "California",
+      date: "May 17, 2018",
+      time: "8pm",
+      description: "You know what happens at concerts",
+      photo: "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1200x630/format/jpg/quality/85/http%3A%2F%2Fi.huffpost.com%2Fgen%2F1900911%2Fimages%2Fn-SAD-CAT-628x314.jpg",
+      category: "Arts & Entertainment",
+      link: "https://www.ticketmaster.com/artist/1013826"
+    }, {
+      name: "Rihanna",
+      location: "California",
+      date: "May 17, 2018",
+      time: "8pm",
+      description: "You know what happens at concerts",
+      photo: "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1200x630/format/jpg/quality/85/http%3A%2F%2Fi.huffpost.com%2Fgen%2F1900911%2Fimages%2Fn-SAD-CAT-628x314.jpg",
+      category: "Arts & Entertainment",
+      link: "https://www.ticketmaster.com/artist/1013826"
+    }]
+  })
   });
 
   // gets biz org to display
-  app.get('/bizdirect', function (req, res) {
-    res.render('bizdirect', {
-      title: "All Organizations", headerName: "Business Directory"
-      // categories: ['Food & Drink', 'Arts & Entertainment'],
-      // categoriesClass: ['food-drink', 'arts-ent']
-      // imageUrl: "/music.jpg" 
-    });
-  });
+  // app.get('/bizdirect', function (req, res) {
+  //   res.render('bizdirect', {
+  //     title: "All Organizations", headerName: "Business Directory"
+  //     // categories: ['Food & Drink', 'Arts & Entertainment'],
+  //     // categoriesClass: ['food-drink', 'arts-ent']
+  //     // imageUrl: "/music.jpg" 
+  //   });
+  // });
 
   // gets organizations page for each
-  app.get('/org1', function (req, res) {
-    res.render('org1', {
-      orgName: "Buffet Club"
+  // app.get('/org1', function (req, res) {
+  //   res.render('org1', {
+  //     headerName: "Buffet Club"
 
-    });
-  });
+  //   });
+  // });
 
   // res.render('favorites', { headerName: "My Favorite Events", favoritesStuff: ['basketball', "movies", "eating"], imageUrl: "/music.jpg" });
   //})
@@ -81,7 +120,7 @@ module.exports = function (app) {
   // gets biz org to display
   app.get('/bizdirect', function (req, res) {
     res.render('bizdirect', {
-      title: "All Organizations",
+      headerName: "All Organizations",
       // categories: ['Food & Drink', 'Arts & Entertainment'],
       // categoriesClass: ['food-drink', 'arts-ent']
       // imageUrl: "/music.jpg" 
@@ -91,37 +130,37 @@ module.exports = function (app) {
   // gets organizations page for each
   app.get('/org1', function (req, res) {
     res.render('org1', {
-      orgName: "Buffet Club"
+      headerName: "Buffet Club"
     });
   });
 
   app.get('/org2', function (req, res) {
     res.render('org2', {
-      orgName: "Buffet Club"
+      headerName: "Sacramento Music Improv"
     });
   });
 
   app.get('/org3', function (req, res) {
     res.render('org3', {
-      orgName: "Buffet Club"
+      headerName: "Karaoke Club"
     });
   });
 
   app.get('/org4', function (req, res) {
     res.render('org4', {
-      orgName: "Buffet Club"
+      headerName: "EXTREME Gaming Night"
     });
   });
 
   app.get('/org5', function (req, res) {
     res.render('org5', {
-      orgName: "Buffet Club"
+      headerName: "Gaming at Odd Hours"
     });
   });
 
   app.get('/org6', function (req, res) {
     res.render('org6', {
-      orgName: "Buffet Club"
+      headerName: "Underwater Caroling"
     });
   });
 
