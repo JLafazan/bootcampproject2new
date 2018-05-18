@@ -62,7 +62,28 @@ module.exports = function (app) {
   // app.get('/api/favorites/:eventid', UserEvents.show);
 
   app.get('/favorites', isAuthenticated, function (req, res) {    
-    res.render('favorites', { title: "User's Favorites", favoritesEvents : [{
+    res.render('favorites', { 
+      headerName: "My Favorites",
+      title: "User's Favorites",
+      favoritesEvents : [{
+      name: "Rihanna",
+      location: "California",
+      date: "May 17, 2018",
+      time: "8pm",
+      description: "You know what happens at concerts",
+      photo: "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1200x630/format/jpg/quality/85/http%3A%2F%2Fi.huffpost.com%2Fgen%2F1900911%2Fimages%2Fn-SAD-CAT-628x314.jpg",
+      category: "Arts & Entertainment",
+      link: "https://www.ticketmaster.com/artist/1013826"
+    }, {
+      name: "Rihanna",
+      location: "California",
+      date: "May 17, 2018",
+      time: "8pm",
+      description: "You know what happens at concerts",
+      photo: "https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/1200x630/format/jpg/quality/85/http%3A%2F%2Fi.huffpost.com%2Fgen%2F1900911%2Fimages%2Fn-SAD-CAT-628x314.jpg",
+      category: "Arts & Entertainment",
+      link: "https://www.ticketmaster.com/artist/1013826"
+    }, {
       name: "Rihanna",
       location: "California",
       date: "May 17, 2018",

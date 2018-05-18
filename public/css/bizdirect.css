@@ -105,7 +105,30 @@ footer {
   background-color: #fff;
 }
 
+/* FAVORITES */
+
+.favorites-h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.card-text {
+  font-size: 20px;
+}
+
 /* INDEX PAGE */
+
+.header-h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h3 {
+  font-family: 'Domine', serif;
+  text-align: center;
+}
 
 .index-h2 {
   text-align: center;
@@ -115,6 +138,11 @@ footer {
 .index-a {
   text-decoration: none;
   color: #fff;
+}
+
+.index-a:hover {
+  text-decoration: none;
+  color: #1a0e05;
 }
 
 #sign-up-box {
@@ -127,8 +155,9 @@ footer {
   margin: 20px 0;
 }
 
-#events {
+#main-events {
   margin: 20px 0;
+  flex:
 }
 
 .NewStory {
@@ -137,10 +166,48 @@ footer {
   margin: 20px 0;
 }
 
+.card {
+  width: 45%;
+  display: inline-flex;
+  margin: 10px;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.events-h5 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.events-h6 {
+  text-align: center;
+  font-family: 'Domine', serif;
+}
+
+/* .side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.card-img-top {
+  width: 100% !important;
+}
+
 /* CREATE EVENTS PAGE */
 
 .cms-h5 {
   margin: 20px 0;
+  font-family: 'Domine', serif;
 }
 
 #cms-submit {
@@ -149,7 +216,30 @@ footer {
   border: none;
 }
 
-/* EVENTS PAGE */
+.form-group {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.form-control {
+  font-family: 'Domine', serif;
+}
+
+/* ALL EVENTS PAGE */
+
+.events-create-a:hover {
+  text-decoration: none;
+  color: navy;
+}
+
+.events-a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.events-a:hover {
+  text-decoration: none;
+  color: navy;
+}
 
 .events-h5 {
   margin: 20px 0;
@@ -171,7 +261,9 @@ footer {
   margin: 0 0 20px 0;
 }
 
-/* MICHELLE'S CSS */
+/*  */
+
+/* ALL EVENTS AND LOCAL ORGANIZATIONS (GRID) PAGES */
 
 .active {
   color: #fff;
@@ -196,6 +288,20 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+}
+
+/* INDIVIDUAL ORG PAGES */
+
+.org-h3 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.org-h5 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.org-p {
+  font-family: 'Domine', serif;
 }
 
 /* Create four equal columns that sits next to each other */

@@ -18,7 +18,7 @@ module.exports = function (app) {
     app.get("/api/events/", function (req, res) {
         // Event instead of Events allows events to show up in All Events
         db.Event.findAll({})
-        // db.Events.findAll({})
+        // db.Event.findAll({})
             .then(function (dbEvents) {
                 res.json(dbEvents);
             });
@@ -26,7 +26,7 @@ module.exports = function (app) {
 
     // Get route for returning events of a specific category
     app.get("/api/events/category/:category", function (req, res) {
-        db.Events.findAll({category: req.params.category})
+        db.Event.findAll({category: req.params.category})
         .then(function(events){
             res.json(events)
         })
@@ -69,7 +69,7 @@ module.exports = function (app) {
 
     // Get route for retrieving a single event
     app.get("/api/events/:id", function (req, res) {
-        db.Events.findOne({
+        db.Event.findOne({
             where: {
                 id: req.params.id
             }
@@ -84,7 +84,7 @@ module.exports = function (app) {
         console.log(req.body);
 
         // req.body.photo is coming in a photo url
-        db.Events.create({
+        db.Event.create({
             name: req.body.name,
             location: req.body.location,
             description: req.body.description,
@@ -100,13 +100,27 @@ module.exports = function (app) {
 
     // DELETE route for deleting events
     app.delete("/api/events/:id", function (req, res){
-        db.Events.destroy({
+        db.Event.destroy({
             where: {
                 id: req.params.id
             }
         })
         .then(function (dbEvents) {
             res.json(dbEvents);
+        });
+    });
+
+    // ADDS FAVORITES
+    app.put("/api/favorites/:userId/:eventId", function (req, res) {
+        console.log(req.params.userId);
+        console.log(req.params.eventId);
+
+        db.Favorite.create({
+            userId: req.params.userId,
+            eventId: req.params.eventId
+        })
+        .then(function (dbEvents) {
+            res.status(200);
         });
     });
 };

@@ -1,84 +1,80 @@
 <link rel="stylesheet" href="./css/bizdirect.css">
 
 <div class="container">
-    {{!-- <div class="row mt-4"> --}}
-        {{!-- <div class="col-md-4"> --}}
+{{!-- <div class="row mt-4"> --}}
+    {{!-- <div class="col-md-4"> --}}
 
-            <div id="events-grid" class="side-by-side">
-                {{!-- <div style="width:500px; height:290px" class="callout text-center"> --}}
-                <div class="text-center">
-                    <h2 class="index-h2">Explore Sac. Go to events. Host your own. <br/>Meet people. Have fun. Stay local.</h2>
-                    <div id="events">
-                        {{!-- will populate with events --}}
-                    </div>
-                    <div class="row NewStory">
-                        {{!-- <div class="new"> --}}
-                        <h2 class="index-h2 text-center"><a class="index-a" href='/cms'>Post your event now!</a></h2>
-                    {{!-- </div> --}}
+        <div id="events-grid" class="side-by-side">
+            {{!-- <div style="width:500px; height:290px" class="callout text-center"> --}}
+            {{!-- <div class="text-center"> --}}
+                <h3>Explore Sac. Meet people. <br/>Go to events. Host your own.</h3>
                 {{!-- </div> --}}
-    <div class="row mt-4">
-        <div class="col-md-4">
-            <div id="sign-up-box">
-                {{#if signup}}
-                <form action="/api/signup" method="POST" class="callout text-center">
+                {{!-- <div  id="events"> --}}
+                    {{!-- will populate with events --}}
+                {{!-- </div> --}}
+                <div class="row NewStory">
+                    {{!-- <div class="new"> --}}
+                    <h2 class="index-h2 text-center"><a class="index-a" href='/cms'>Post your event now!</a></h2>
+                    </div>
+                {{!-- </div> --}}
+            {{!-- </div> --}}
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+{{!-- <div class="row mt-4"> --}}
+    {{!-- <div class="col-md-4"> --}}
+        <div id="sign-up-box">
+            {{#if signup}}
+            <form action="/api/signup" method="POST" class="callout text-center">
+                {{else}}
+                <form action="/api/login" method="POST" class="callout text-center">
+                    {{/if}}
+                    <h2>{{action}}</h2>
+                    <div class="floated-label-wrapper">
+                        <label for="email">Email</label>
+                        <input type="email" id="signup-email" name="email" placeholder="Email">
+                    </div>
+                    <div class="floated-label-wrapper">
+                        <label for="pass">Password</label>
+                        <input type="password" id="signup-password" name="password" placeholder="Password">
+                    </div>
+                    <input class="button expanded" type="submit" value={{{action}}}>
+                    {{#if signup}}
+                        <p>Already a member? Sign in
+                            <a href="/" id="signinhere">here.</a>
+                        </p>
                     {{else}}
-                    <form action="/api/login" method="POST" class="callout text-center">
-                        {{/if}}
-                        <h2>{{action}}</h2>
-                        <div class="floated-label-wrapper">
-                            <label for="email">Email</label>
-                            <input type="email" id="signup-email" name="email" placeholder="Email">
-                        </div>
-                        <div class="floated-label-wrapper">
-                            <label for="pass">Password</label>
-                            <input type="password" id="signup-password" name="password" placeholder="Password">
-                        </div>
-                        <input class="button expanded" type="submit" value={{{action}}}>
-                        {{#if signup}}
-                            <p>Already a member? Sign in
-                                <a href="/" id="signinhere">here.</a>
-                            </p>
-                        {{else}}
-                            <p>Not a member? Sign up
-                                <a href="/new" id="signinhere">here.</a>
-                            </p>
-                        {{/if}}
-                        
-                    </form>
+                        <p>Not a member? Sign up
+                            <a href="/new" id="signinhere">here.</a>
+                        </p>
+                    {{/if}}
+                    
+                </form>
+        </div></div></div>
+        <div id="sign-in-box" class="side-by-side">
+            {{!-- <div style="width:500px; height:550px" class="callout text-center"> --}}
+            {{!-- <div class="callout text-center"></div> --}}
+                <h2 class="text-center">Upcoming Events</h2>
+                <div id="main-events"></div>
             </div>
-            <div id="sign-in-box" class="side-by-side">
-                <div style="width:500px; height:550px" class="callout text-center">
-                    <h2>Events</h2>
-                    <div id="main-events"></div>
-                </div>
-            </div>
+        </div>
 
 
-            <div id="video" class="side-by-side">
-                <iframe width="574" height="290" src="https://www.youtube.com/embed/FsVkcy0bEbM" frameborder="0" allow="autoplay; encrypted-media"
-                    align="middle" allowfullscreen></iframe>
+        {{!-- <div id="video" class="side-by-side">
+            <iframe width="574" height="290" src="https://www.youtube.com/embed/FsVkcy0bEbM" frameborder="0" allow="autoplay; encrypted-media"
+                align="middle" allowfullscreen></iframe>
 
-            </div>
-
-
-            <!-- https://www.youtube.com/watch?v=FsVkcy0bEbM -->
+        </div> --}}
 
 
+        <!-- https://www.youtube.com/watch?v=FsVkcy0bEbM -->
 
-
-            <!--   </div>
-      </div>
-      -->
-            <!-- <div class="col-md-2">
-        <a class="btn btn-light" href="/cms">New Story</a>
-      </div> -->
-        {{!-- </div> --}}
-
-    {{!-- </div> --}}
+</div>
+</div>
 </div>
 </div>
 <footer>
-    
+
 </footer>
 
 <!-- Custom Script -->

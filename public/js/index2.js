@@ -12,7 +12,8 @@ $(document).ready(function() {
         eventsContainer.html("No events")
       } else {
         events.forEach(event => {
-          var eventCard= $('<div class="card" style="width: 18rem;">');
+          // var eventCard= $('<div class="card" style="width: 18rem;">');
+          var eventCard= $('<div class="card">');
           eventCard.append(`<img class="card-img-top" src=${event.photo} alt="Card image cap">`);
             eventCard.append('<div class="card-body">');
             eventCard.append(`<h5 class="card-title">${event.name}</h5>`)
